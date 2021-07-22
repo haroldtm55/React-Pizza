@@ -1,12 +1,12 @@
 import React from "react"
 
-const Pizza = () => {
+const Pizza = ({pizzaInfo,handleClick}) => {
   return(
     <tr>
-      <td>{"Replace Me With Pizza Topping"}</td>
-      <td>{"Replace Me With Pizza Size"}</td>
-      <td>{"Replace Me With Vegatarian"}</td>
-      <td><button type="button" className="btn btn-primary">Edit Pizza</button></td>
+      <td>{pizzaInfo.topping}</td>
+      <td>{pizzaInfo.size}</td>
+      <td>{pizzaInfo.vegetarian ? 'Yes' : 'No'}</td>
+      <td><button onClick={()=>handleClick(pizzaInfo)} type="button" className="btn btn-primary">Edit Pizza</button></td>
     </tr>
   )
 }
